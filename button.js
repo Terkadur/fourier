@@ -19,7 +19,7 @@ function Button(x, y, w, h, txt, col1, col2) { //class for the buttons
     rect(this.x, this.y, this.w, this.h);
 
     textAlign(CENTER, CENTER);
-    textSize(16);
+    textSize(0.0125*width);
     fill(255);
     text(this.txt, this.x + this.w/2, this.y + this.h/2);
   }
