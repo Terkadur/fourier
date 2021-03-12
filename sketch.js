@@ -18,7 +18,9 @@ let alph_sloider;
 let cpt_sloider;
 
 function setup() {
-  createCanvas(1280, 512);
+  let width1 = windowWidth;
+  let width2 = (windowHeight - 4)/0.4;
+  createCanvas(min(width1, width2), 0.4*min(width1, width2));
   frameRate(fr);
 
   drawing = createGraphics(0.4*width, height);
@@ -57,7 +59,7 @@ function draw() {
   image(sketcher, 0.4*width, 0);
   image(panel, 0.8*width, 0);
 
-  textSize(16);
+  textSize(0.0125*width);
   stroke(255);
   text("Fourier approximation", 0.2*width, 0.06*height);
   text("Sketching pad", 0.6*width, 0.06*height);
@@ -67,7 +69,7 @@ function draw() {
     textAlign(CENTER, CENTER);
     fill(255);
     text("Instructions:", 0.2*width, 0.16*height);
-    textSize(14);
+    textSize((7/640)*width);
     text("1. Draw your image on the Sketching pad using your mouse or\na stylus. Make sure the drawing is one continuous line that\nends in the same place it begins. To restart, simply let go\nand start drawing again.", 0.2*width, 0.26*height);
     text("2. Adjust the Number of epicycles slider to set the number\nof circles desired to approximate your drawing. Higher\nvalues correspond to higher accuracy while lower values\n correspond to more abstractness.", 0.2*width, 0.42*height);
     text("3. You may adjust the Epicycle opacity slider to change\nthe visibility of the circles, and the Speed slider to change\nthe speed of these circles.", 0.2*width, 0.56*height);
@@ -81,7 +83,7 @@ function draw() {
 
   stroke(0, 0, 0, 0);
   textAlign(CENTER, CENTER);
-  textSize(16);
+  textSize(0.0125*width);
   fill(255);
   text("Number of epicycles: " + 2*n_sloider.val, 0.9*width, 0.10*height);
   text("Epicycle opacity: " + alph_sloider.val, 0.9*width, 0.26*height);
@@ -206,3 +208,9 @@ function keyTyped() {
     drawing.stroke(255);
   }
 }
+
+// function windowResized() {
+//   let width1 = windowWidth;
+//   let width2 = (windowHeight - 4)/0.4;
+//   resizeCanvas(min(width1, width2), 0.4*min(width1, width2));
+// }
