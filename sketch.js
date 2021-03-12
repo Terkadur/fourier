@@ -18,6 +18,7 @@ let alph_sloider;
 let cpt_sloider;
 
 function setup() {
+  print("Version 1.0");
   let width1 = windowWidth;
   let width2 = (windowHeight - 4)/0.4;
   createCanvas(min(width1, width2), 0.4*min(width1, width2));
