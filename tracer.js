@@ -19,7 +19,7 @@ let cpt_sloider;
 let tracing;
 
 function preload() {
-  tracing = loadImage("assets/img.png");
+  tracing = loadImage("assets/img.jpg");
 }
 
 function setup() {
