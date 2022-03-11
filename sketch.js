@@ -18,7 +18,7 @@ let alph_sloider;
 let cpt_sloider;
 
 function setup() {
-  print("Version 1.3");
+  print("Version 1.4");
   document.body.style.overflow = 'hidden';
   let width1 = windowWidth;
   let width2 = (windowHeight - 4)/0.4;
