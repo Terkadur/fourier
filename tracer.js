@@ -23,7 +23,8 @@ function preload() {
 }
 
 function setup() {
-  print("Version 1.5");
+  print("Version 1.6");
+  document.body.style.overflow = 'hidden';
   let width1 = windowWidth;
   let width2 = (windowHeight - 4)/0.4;
   createCanvas(min(width1, width2), 0.4*min(width1, width2));
