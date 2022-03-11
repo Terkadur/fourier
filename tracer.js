@@ -19,11 +19,11 @@ let cpt_sloider;
 let tracing;
 
 function preload() {
-  tracing = loadImage("assets/img.jpg");
+  tracing = loadImage("assets/img.png");
 }
 
 function setup() {
-  print("Version 1.1");
+  print("Version 1.5");
   let width1 = windowWidth;
   let width2 = (windowHeight - 4)/0.4;
   createCanvas(min(width1, width2), 0.4*min(width1, width2));
